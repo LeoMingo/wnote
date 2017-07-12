@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.security.*;
 
 
-public class test_main{
+public class Test{
     public static String[] splitAt(String str, String tok){
         char[] strArr = str.toCharArray();
         char[] tokArr = tok.toCharArray();
