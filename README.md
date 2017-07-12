@@ -1,2 +1,2 @@
 # wnote
-This is a program for archiving my various notes, expected to have both Perl for Linux and Java for Android APIs. 
+This is a program for archiving my notes of all kinds, expected to have both Perl for Linux and Java for Android APIs. 
