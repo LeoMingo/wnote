@@ -19,6 +19,8 @@ public class fileManip{
             fi.close();
         }catch(Exception e){
             System.err.println("An error occured at fileRead() function for \""+filename+"\"");
+            //^---------------^
+            System.out.println(Exception.stacktrace());
         }
         return fstr;
     }
