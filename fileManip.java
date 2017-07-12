@@ -19,8 +19,7 @@ public class fileManip{
             fi.close();
         }catch(Exception e){
             System.err.println("An error occured at fileRead() function for \""+filename+"\"");
-            //^---------------^
-            System.out.println(Exception.stacktrace());
+            e.printStackTrace();
         }
         return fstr;
     }
@@ -35,6 +34,7 @@ public class fileManip{
             fo.close();
         }catch(Exception e){ 
             System.err.println("An error occured at fileWrite() function for \""+filename+"\"");
+            e.printStackTrace();
         }
     }
 
