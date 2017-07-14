@@ -17,7 +17,7 @@ import java.util.*;
 
 
 //Remeber to escape special chars like '[' ']' in the wnStrWrite
-public class WNStrManip{
+public class WNStr{
     String wnStr = "";
     char[] wnCharArr;
     //The followings are used in strToWNUnits()
@@ -31,7 +31,7 @@ public class WNStrManip{
     String[] wnVals;
     int unitNum;
 
-    public WNStrManip(String wnStr){
+    public WNStr(String wnStr){
         this.wnStr = wnStr;
         wnCharArr = this.wnStr.toCharArray();
     }
@@ -62,7 +62,7 @@ public class WNStrManip{
         wnKeys = new String[unitNum];
         wnVals = new String[unitNum];
         for (int i = 0; i < unitNum; i++){
-            wnKeys[i] = wnStr.substring((keysStartIdx.get(i) + 1), keysEndIdx.get(i));
+            wnKeys[i] = wnStr.substring((keysStartIdx.get(i)+1), keysEndIdx.get(i));
             wnVals[i] = wnStr.substring((valsStartIdx.get(i)+1), valsEndIdx.get(i));
         }
     }
@@ -135,7 +135,7 @@ public class WNStrManip{
            if(hasChar == 0 || newIdx<lastIdx){
                errCharNum += 1;
            }
-           lastIdx = newIdx+1;
+           lastIdx = newIdx;
         }
 
         if(errCharNum > errRange){
